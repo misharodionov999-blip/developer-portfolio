@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { formatIndex, heroFocus, projects, site } from "../data/content.ts";
+import { formatIndex, projects, site } from "../data/content.ts";
 import { ProjectShot } from "./ProjectShot.tsx";
 
 export function Hero() {
@@ -7,28 +7,23 @@ export function Hero() {
     <section className="hero" id="top">
       <div className="shell hero-grid">
         <div className="hero-copy">
-          <p className="eyebrow">Портфолио</p>
-          <h1 className="hero-title">
-            <span className="hero-name">{site.name}</span>{" "}
-            <span className="hero-role">— {site.role}</span>
-          </h1>
+          <p className="eyebrow">
+            {site.name} — {site.role}
+          </p>
+          <h1 className="hero-title">{site.headline}</h1>
           <p className="hero-lead">{site.lead}</p>
+          <p className="hero-scope">{site.scope}</p>
           <div className="hero-actions">
-            <Link className="button" to="/#projects">
-              Посмотреть проекты
-            </Link>
-            <Link className="button button-ghost" to="/#contacts">
+            <Link className="button" to="/#contacts">
               Обсудить проект
             </Link>
+            <Link className="button button-ghost" to="/#projects">
+              Смотреть проекты
+            </Link>
           </div>
-          <ul className="focus-list">
-            {heroFocus.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </div>
-        <aside className="hero-panel" aria-label="Кратко о проектах">
-          <p className="eyebrow">Три формата работы</p>
+        <aside className="hero-panel" aria-label="Избранные проекты">
+          <p className="eyebrow">Проекты</p>
           <div className="hero-projects">
             {projects.map((project, index) => (
               <Link className="hero-project" key={project.slug} to={`/projects/${project.slug}`}>
@@ -45,7 +40,7 @@ export function Hero() {
                     {formatIndex(index)} — {project.kind}
                   </span>
                   <strong>{project.title}</strong>
-                  <span>{project.summary}</span>
+                  <span>{project.brief}</span>
                 </span>
               </Link>
             ))}

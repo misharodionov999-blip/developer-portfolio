@@ -1,12 +1,12 @@
 import portrait from "../assets/portrait.jpg";
-import { aboutParagraphs, competencies } from "../data/content.ts";
+import { aboutParagraphs } from "../data/content.ts";
 
 export function About() {
   return (
     <section className="section section-soft" id="about" aria-labelledby="about-title">
       <div className="shell about-layout">
         <div className="section-heading reveal">
-          <p className="eyebrow">04</p>
+          <p className="eyebrow">06</p>
           <h2 id="about-title">Обо мне</h2>
         </div>
         <figure className="portrait reveal">
@@ -25,11 +25,6 @@ export function About() {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <ul className="competency-grid reveal">
-            {competencies.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>

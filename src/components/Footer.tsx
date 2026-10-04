@@ -19,7 +19,7 @@ export function Footer() {
             </Link>
           ))}
         </nav>
-        <p className="footer-meta">© {year}. Самостоятельные проекты.</p>
+        <p className="footer-meta">© {year}. Разработка цифровых решений.</p>
       </div>
     </footer>
   );

@@ -5,10 +5,10 @@ export function Process() {
     <section className="section" id="process" aria-labelledby="process-title">
       <div className="shell">
         <div className="section-heading reveal">
-          <p className="eyebrow">03</p>
+          <p className="eyebrow">05</p>
           <div>
             <h2 id="process-title">Как я работаю</h2>
-            <p className="lede">От формулировки задачи до публикации — один и тот же порядок, без лишних этапов.</p>
+            <p className="lede">От обсуждения задачи до публикации и дальнейшего развития.</p>
           </div>
         </div>
         <ol className="process-steps reveal">

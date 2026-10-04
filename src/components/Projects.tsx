@@ -8,7 +8,7 @@ export function Projects() {
     <section className="section" id="projects" aria-labelledby="projects-title">
       <div className="shell">
         <div className="section-heading reveal">
-          <p className="eyebrow">01</p>
+          <p className="eyebrow">02</p>
           <div>
             <h2 id="projects-title">Избранные проекты</h2>
             <p className="lede">{projectsNote}</p>
@@ -41,7 +41,7 @@ export function Projects() {
                   <p>{project.task}</p>
                 </div>
                 <div>
-                  <p className="field-label">Что реализовано</p>
+                  <p className="field-label">Реализовано</p>
                   <ul className="done-list">
                     {project.implemented.map((item) => (
                       <li key={item}>{item}</li>
@@ -49,7 +49,7 @@ export function Projects() {
                   </ul>
                 </div>
                 <div>
-                  <p className="field-label">Стек</p>
+                  <p className="field-label">Технологии</p>
                   <ul className="stack-list">
                     {project.stack.map((item) => (
                       <li key={item}>{item}</li>

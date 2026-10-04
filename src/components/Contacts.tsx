@@ -1,13 +1,25 @@
-import { contactPlaces, formatIndex } from "../data/content.ts";
+import { contactLead, contactPlaces, formatIndex } from "../data/content.ts";
 import { ExternalLink } from "./ExternalLink.tsx";
 
 export function Contacts() {
+  const telegram = contactPlaces[0];
+
   return (
     <section className="section contacts" id="contacts" aria-labelledby="contacts-title">
       <div className="shell">
         <div className="section-heading reveal">
-          <p className="eyebrow">05</p>
-          <h2 id="contacts-title">Есть задача? Давайте обсудим проект.</h2>
+          <p className="eyebrow">Контакты</p>
+          <div>
+            <h2 id="contacts-title">Есть задача? Давайте обсудим проект.</h2>
+            <p className="lede">{contactLead}</p>
+            {telegram ? (
+              <div className="hero-actions">
+                <ExternalLink className="button" href={telegram.href}>
+                  Написать в Telegram
+                </ExternalLink>
+              </div>
+            ) : null}
+          </div>
         </div>
         <ul className="contact-places">
           {contactPlaces.map((place, index) => (

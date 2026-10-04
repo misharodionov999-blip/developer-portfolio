@@ -34,26 +34,35 @@ export function ProjectPage() {
         <div className="case-story">
           <p className="field-label">Задача</p>
           <p>{project.task}</p>
-          <p className="field-label">Что реализовано</p>
+          <p className="field-label">Решение</p>
+          <p>{project.solution}</p>
+          <p className="field-label">Реализовано</p>
           <ul className="done-list">
             {project.implemented.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p>{project.description}</p>
         </div>
         <dl className="case-facts">
           <div>
-            <dt>Формат</dt>
-            <dd>{project.kind}</dd>
+            <dt>Технологии</dt>
+            <dd>
+              <ul className="stack-list">
+                {project.stack.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </dd>
           </div>
           <div>
-            <dt>Стек</dt>
-            <dd>{project.stack.join(", ")}</dd>
-          </div>
-          <div>
-            <dt>Статус</dt>
-            <dd>Самостоятельный проект</dd>
+            <dt>Результат</dt>
+            <dd>
+              <ul className="done-list">
+                {project.results.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </dd>
           </div>
         </dl>
       </div>
